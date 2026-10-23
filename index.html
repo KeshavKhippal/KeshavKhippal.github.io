@@ -249,15 +249,15 @@
       <div class="pipeline" aria-label="MedAuth Sentinel agent pipeline diagram">
         <p class="p-title">The 3-agent pipeline</p>
         <div class="agent-row">
-          <div class="agent"><span class="a-name">IntakeAgent</span><div class="a-role">validates patient, ICD-10, completeness</div></div>
+          <div class="agent"><span class="a-name">📥 Intake Agent</span><div class="a-role">validates patient, ICD-10, completeness</div></div>
           <div class="wire"></div>
-          <div class="agent"><span class="a-name">DecisionAgent</span><div class="a-role">diagnosis × history × payer policy → decision</div></div>
+          <div class="agent"><span class="a-name">⚖️ Decision Agent</span><div class="a-role">diagnosis × history × payer policy → decision</div></div>
           <div class="wire"></div>
-          <div class="agent critic"><span class="a-name">CriticAgent</span><div class="a-role">adversarial review — catches missed exceptions</div></div>
+          <div class="agent critic"><span class="a-name">🧐 Critic Agent</span><div class="a-role">adversarial review — catches missed exceptions</div></div>
           <div class="wire"></div>
-          <div class="agent out"><span class="a-name">Decision + Trace</span><div class="a-role">APPROVE / DENY / MORE_INFO · confidence · criteria</div></div>
+          <div class="agent out"><span class="a-name">✅ Decision + Trace</span><div class="a-role">APPROVE / DENY / MORE_INFO · confidence · criteria</div></div>
         </div>
-        <p class="loopnote">↺ critic disagrees → DecisionAgent re-runs <b>with the feedback</b> · revision_made: true</p>
+        <p class="loopnote">↺ critic disagrees → Decision Agent re-runs <b>with the feedback</b> · revision_made: true</p>
       </div>
     </div>
   </section>
